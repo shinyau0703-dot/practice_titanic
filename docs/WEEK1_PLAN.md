@@ -1,29 +1,32 @@
 ✅ Week 1 計畫 (Titanic 生存預測)
 Day 1 — 環境 + GitHub + 專案骨架
 
-目標：建立完整專案結構並 push 到 GitHub
+目標1：建立完整專案結構並 push 到 GitHub
 
- VScode 連 GitHub
+ [V] VScode 連 GitHub
 
- 在 VScode 上建立 venv (虛擬環境)
+ [V]在 VScode 上建立 venv (虛擬環境)
 
- 確認未啟用狀態: PS D:\practive_w1>
+ 未啟用狀態: PS D:\practive_w1>
 
  成功啟用狀態: (.venv) PS D:\practive_w1>
 
- 安裝需要的套件並存放在 venv
+ [ ]安裝需要的套件並存放在 venv
 
- 匯出 requirements.txt
+ [V]建立 .gitignore（忽略 venv、pycache、data/processed、models_store）
 
- 建立 .gitignore（忽略 venv、pycache、data/processed、models_store）
+ [V] 建立資料夾骨架（data, src, models_store, experiments, notebooks）
 
- 初始化 Git，連 GitHub repo，push 首次 commit
+ [V]下載 Titanic dataset，放到 data/raw/
 
- 建立資料夾骨架（data, src, models_store, experiments, notebooks）
+ [V]撰寫 README/FILE_TREE/WEEK1_PLAN
 
- 下載 Titanic dataset，放到 data/raw/
+目標2：資料前處理
 
- 撰寫 README 初版
+ [V] EDA(探索式資料分析)
+
+
+
 
 Day 2 — 資料清理 + 分割
 
