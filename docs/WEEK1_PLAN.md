@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ✅ Week 1 計畫 (Titanic 生存預測)
 Day 1 — 環境 + GitHub + 專案骨架
 
@@ -73,5 +72,3 @@ Day 5 — 專案驗收 & GitHub 更新
  更新 README（包含：環境建置、資料、清理、訓練、結果檔案位置）
 
  最後 push GitHub，Week 1 ✅ 完成
-=======
->>>>>>> 2e9af94 (docs: update WEEK1_PLAN and ignore FILES_NOW)
