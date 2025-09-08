@@ -1,17 +1,16 @@
 ✅ Week 1 計畫 (Titanic 生存預測)
 Day 1 — 環境 + GitHub + 專案骨架
 
-目標1：建立完整專案結構並 push 到 GitHub
+目標1：把房間建好、工具裝齊、專案架好骨架，還上傳到 GitHub
 
  [V] VScode 連 GitHub
 
  [V]在 VScode 上建立 venv (虛擬環境)
-
  未啟用狀態: PS D:\practive_w1>
-
  成功啟用狀態: (.venv) PS D:\practive_w1>
 
- [ ]安裝需要的套件並存放在 venv
+ [V]安裝需要的套件並存放在 venv
+ pip install pandas scikit-learn matplotlib joblib jupyterlab ipykernel python-dotenv
 
  [V]建立 .gitignore（忽略 venv、pycache、data/processed、models_store）
 

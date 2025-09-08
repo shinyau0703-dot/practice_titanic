@@ -6,9 +6,9 @@
 │  ├─ raw/              # 原始 Kaggle Titanic 資料（train.csv, test.csv）
 │  ├─ processed/        # 清理後資料（X_train, y_train...，可重生，Git 忽略）
 │
-├─ docs/                # 文件
+├─ docs/                # 文件(說明、規劃、紀錄) *通常是 Markdown(.md)檔，或文字檔
 │  ├─ WEEK1_PLAN.md     # Week1 計畫（todo list）
-│  └─ FILES_NOW_MINI.txt# 檔案清單快照
+│  └─ FILES_TREE.md    # 檔案清單快照
 │
 ├─ experiments/         # 實驗結果
 │  └─ baseline_results.txt   # baseline 模型的報表
