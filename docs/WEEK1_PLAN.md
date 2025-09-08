@@ -20,26 +20,20 @@ Day 1 — 環境 + GitHub + 專案骨架
 
  [V]撰寫 README/FILE_TREE/WEEK1_PLAN
 
-目標2：資料前處理
 
- [V] EDA(探索式資料分析)
+目標2：資料前處理(資料清理 + 分割)
 
+ [ ] EDA(探索式資料分析)--jupyter notebook
 
+ [ ] 決定要用的欄位（Pclass, Sex, Age, SibSp, Parch, Fare, Embarked）
 
+ [ ] 缺值處理（Age → 中位數、Embarked → 最常見值）
 
-Day 2 — 資料清理 + 分割
+ [ ]類別轉數值（Sex, Embarked → OneHot）
 
-目標：一次完成資料處理流程
+ [ ]切分 train/valid (80/20)
 
- 決定要用的欄位（Pclass, Sex, Age, SibSp, Parch, Fare, Embarked）
-
- 缺值處理（Age → 中位數、Embarked → 最常見值）
-
- 類別轉數值（Sex, Embarked → OneHot）
-
- 切分 train/valid (80/20)
-
- 存成 data/processed/ + preprocessor.joblib
+ [ ]存成 data/processed/ + preprocessor.joblib
 
 Day 3 — baseline 模型訓練
 
