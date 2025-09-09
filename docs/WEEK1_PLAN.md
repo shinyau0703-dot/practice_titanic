@@ -1,7 +1,6 @@
-✅ Week 1 計畫 (Titanic 生存預測)
-Day 1 — 環境 + GitHub + 專案骨架
-
-目標1：把房間建好、工具裝齊、專案架好骨架，還上傳到 GitHub
+# ✅ Week 1 計畫 (Titanic 生存預測)
+---
+## Day 1 — 把房間建好、工具裝齊、專案架好骨架，上傳到 GitHub
 
  [V] VScode 連 GitHub
 
@@ -21,30 +20,31 @@ Day 1 — 環境 + GitHub + 專案骨架
  [V]撰寫 README/FILE_TREE/WEEK1_PLAN
 
 
-目標2：資料前處理(資料清理 + 分割)
+## Day 2 — 資料前處理(資料清理 + 分割)
 
  [V] EDA(探索式資料分析)--jupyter notebook
 
  [V] 缺值處理 clean.py
 
- [ ] 類別轉數值（OneHot）train.py
+ [V] 類別轉數值（OneHot）train.py
 
- [ ] 切分 train/valid (80/20)  train.py
+ [V] 切分 train/valid (80/20)  train.py
+     *output-1:models_store/model.joblib
+     *output-2:experiments/baseline_results.txt
 
-
-Day 3 — baseline 模型訓練
+## Day 3 — baseline 模型訓練
 
 目標：完成第一個可運行的模型
 
- 使用 Logistic Regression 作 baseline
+[V] 使用 Logistic Regression 作 baseline  experiments/baseline_results.txt
 
- 輸出 Accuracy 與分類報表
+[V] 輸出 Accuracy 與分類報表 experiments/baseline_results.txt
 
- 存成 models_store/model.joblib
+[V] 存成 models_store/model.joblib
 
- 記錄結果於 experiments/baseline_results.txt
+[V] 記錄結果於 experiments/baseline_results.txt
 
-Day 4 — 重現性測試
+## Day 4 — 重現性測試
 
 目標：確認專案可從零跑起來
 
@@ -56,7 +56,7 @@ Day 4 — 重現性測試
 
  修正 README，補充完整流程
 
-Day 5 — 專案驗收 & GitHub 更新
+## Day 5 — 專案驗收 & GitHub 更新
 
 目標：完成乾淨可重現專案
 

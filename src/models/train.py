@@ -8,9 +8,6 @@ Titanic baseline 訓練腳本
 - 輸出：
     models_store/model.joblib    （整條 Pipeline）
     experiments/baseline_results.txt（Accuracy / 分類報表 / 混淆矩陣）
-- 對外介面：
-    run_train(processed_dir, model_dir, exp_dir) -> dict
-    也可直接 CLI 執行：python src/models/train.py --processed-dir ... --model-dir ... --exp-dir ...
 """
 
 from __future__ import annotations

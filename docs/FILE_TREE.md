@@ -9,6 +9,13 @@
 │  ├─ processed/                            # 清理後資料（train, test）
 │  └─ clean.py                              # 資料清理(遺失值處理,刪掉不必要欄位,簡單衍生特徵)
 │
+│
+├─ logs/                    
+│  ├─ titanic.log          ← 所有 log 都存這裡
+│  ├─ training.log         ← 或者分類存放
+│  └─ cleaning.log
+│
+│
 ├─ docs/
 │  ├─ WEEK1_PLAN.md
 │  └─ FILES_TREE.md
@@ -16,7 +23,8 @@
 ├─ experiments/
 │  └─ baseline_results.txt
 │
-├─ models_store/                            # 存模型/前處理器（joblib / json 等）
+├─ models_store/     # 存模型/前處理器（joblib / json 等）
+│  └─ model.joblib   # 存train.py
 │
 ├─ notebooks/
 │  └─ eda.ipynb
@@ -39,9 +47,9 @@
 │  │
 │  └─ models/
 │      ├─ __init__.py                 (X)
-│      ├─ train.py                         # 你已有：訓練 baseline（建議改成 run_train 介面）
-│      ├─ evaluate.py                 (X)  # 載入模型做評估、輸出指標
-│      └─ predict.py                  (X)  # 讀 test_clean 產生 submission.csv
+│      ├─ train.py                         # 訓練 baseline（output:experiment/baseline_result.txt）
+│      ├─ evaluate.py                      # 載入模型做評估、輸出指標
+│      └─ predict.py                       # 讀 test_clean 產生 submission.csv
 │
 ├─ .gitignore
 ├─ requirements.txt
