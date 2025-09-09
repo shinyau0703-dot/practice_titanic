@@ -1,98 +1,94 @@
-🔍 Titanic EDA 流程
-1. 初步檢查
+# 🔍 Titanic 專案筆記 — 前處理常用套件 & EDA 流程
+**EDA = Exploratory Data Analysis，探索式資料分析
+---
 
-目標：確定資料能讀、欄位有哪些
+## 📦 前處理常用套件整理
 
-看 train.csv 的前幾列、欄位名稱
+### 🟦 資料操作 / 基礎工具
+- **pandas**  
+  表格資料處理（讀寫 CSV、DataFrame 運算、缺值處理、合併等）
+- **numpy**  
+  底層數值計算（陣列、矩陣、統計函數）
+- **os / pathlib**  
+  路徑與檔案處理，確認目錄與檔案存在性
 
-確認資料量（列數、欄位數）
+### 🟩 缺值處理 / 特徵工程
+- **scikit-learn (`sklearn`)**
+  - `sklearn.impute`  
+    - `SimpleImputer`：均值 / 中位數 / 眾數填補  
+    - `KNNImputer`：用鄰近樣本補值  
+  - `sklearn.preprocessing`  
+    - `StandardScaler`：標準化 (平均=0, 方差=1)  
+    - `MinMaxScaler`：縮放到 [0,1]  
+    - `OneHotEncoder`：類別變數轉數值  
+    - `LabelEncoder`：將類別轉為整數編碼  
+    - `PolynomialFeatures`：生成多項式特徵  
+  - `sklearn.feature_selection`  
+    - `SelectKBest`、`RFE`：特徵選擇工具
 
-👉 問題：
+### 🟨 資料視覺化
+- **matplotlib**  
+  基礎繪圖：直方圖、散點圖、條狀圖  
+- **seaborn**  
+  統計視覺化：heatmap、boxplot、countplot、barplot  
 
-共有幾筆乘客資料？
+### 🟧 進階處理
+- **scipy**  
+  統計方法（t-test、卡方檢定、常態檢驗等）  
+- **category_encoders**  
+  進階編碼（Target Encoding、Ordinal Encoding 等）  
+- **imbalanced-learn (`imblearn`)**  
+  資料不平衡處理（SMOTE、RandomUnderSampler 等）
 
-欄位有哪一些？
+### 🟥 實驗追蹤（可選）
+- **mlflow**  
+  實驗管理，記錄參數、指標與模型  
+- **wandb (Weights & Biases)**  
+  雲端實驗追蹤，適合團隊合作  
 
-2. 資料結構 & 缺值檢查
+---
 
-目標：知道哪些欄位有缺值、缺多少
+## 📊 Titanic EDA 流程
 
-用 .info() 看資料型態（int、float、object）
+### Step 0 — 基本設定
+- 確認工作目錄 (CWD) 是否正確  
+- 確認 Python 版本是否來自虛擬環境 `.venv`  
+- 檔案路徑是否能正確找到 `train.csv`、`test.csv`
 
-用 .isna().sum() 數缺值
+### Step 1 — 匯入與讀檔
+- 讀取 `train.csv`（訓練資料）  
+- 讀取 `test.csv`（測試資料）  
+- 讀取 `gender_submission.csv`（Kaggle 提交範例，可選）  
+- 確認資料大小與欄位名稱  
 
-👉 問題：
+### Step 2 — 初步檢查
+- 查看資料列數與欄位數  
+- 使用 `head()` 檢視前幾筆資料  
+- 確認欄位清單  
 
-Age 有多少缺值？
+### Step 3 — 資料結構 & 缺值檢查
+- 使用 `.info()` 確認欄位型態（數值/類別）  
+- 使用 `.isna().sum()` 計算缺值數量  
+- 計算缺值比例，判斷哪些欄位需要處理或捨棄  
 
-Cabin 幾乎都是缺值？要不要捨棄？
+### Step 4 — 單變數分佈 (Univariate Analysis)
+- 數值型變數：`Age`、`Fare` → 畫直方圖  
+- 類別型變數：`Sex`、`Pclass`、`Embarked` → 計算人數並繪製分布圖  
 
-3. 單變數分佈 (Univariate Analysis)
+### Step 5 — 雙變數關聯 (Bivariate Analysis)
+- `Sex` vs `Survived` → 生存率與性別  
+- `Pclass` vs `Survived` → 生存率與艙等  
+- `Age` 分箱 vs `Survived` → 生存率與年齡群組  
+- `Fare` 分組 vs `Survived` → 生存率與票價分佈  
 
-目標：看每個欄位自己長什麼樣子
+### Step 6 — 多變數交互作用
+- `Sex + Pclass` → 性別與艙等的聯合影響  
+- `SibSp + Parch → FamilySize` → 家庭人數與生存率關係  
 
-數值型：年齡直方圖 (Age)、票價直方圖 (Fare)
+### Step 7 — 總結
+- 保留重要特徵：`Sex`, `Pclass`, `Age`, `Fare`, `FamilySize`  
+- 考慮刪除或簡化：`Cabin`, `Ticket`  
+- 類別型需轉換：`Sex`, `Embarked`  
+- 數值型可分箱或標準化：`Age`, `Fare`  
 
-類別型：統計人數（Sex、Pclass、Embarked）
-
-👉 問題：
-
-男/女比例大概是多少？
-
-年齡分佈偏年輕還是年長？
-
-票價範圍大嗎？有極端值嗎？
-
-4. 雙變數關聯 (Bivariate Analysis)
-
-目標：看看「生存率」與其他欄位的關係
-
-類別 vs 生存率：
-
-Sex vs Survived
-
-Pclass vs Survived
-
-數值 vs 生存率：
-
-Age vs Survived（分箱後比較，例如 <18、18-40、40+）
-
-Fare vs Survived
-
-👉 問題：
-
-女性生存率是不是明顯高？
-
-頭等艙 (Pclass=1) 的生存率是否 > 三等艙？
-
-5. 多變數交互作用 (Optional, 可簡單做)
-
-目標：看看兩個欄位聯合起來，生存有什麼趨勢
-
-Sex + Pclass → 不同性別在不同艙等的生存率
-
-SibSp + Parch → 家庭人數對生存率的影響
-
-👉 問題：
-
-女生 + 頭等艙是不是幾乎都活下來？
-
-家人太多或太少的人，生存率比較低？
-
-6. 總結
-
-目標：整理觀察結果，當作後續特徵工程的依據
-
-哪些欄位很有用（Sex, Pclass, Age, Fare）
-
-哪些欄位缺值太多、要捨棄或簡化（Cabin, Ticket）
-
-哪些欄位需要轉換（類別 → 數值、年齡分箱等）
-
-✅ 小提示
-
-你可以用 pandas + matplotlib/seaborn 畫圖
-
-Notebook (.ipynb) 很適合做 EDA，因為可以一格一格試不同欄位
-
-觀察重點不在「畫圖多漂亮」，而是在於「發現問題 & 洞察」
+---
