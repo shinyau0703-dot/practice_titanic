@@ -2,6 +2,119 @@
 **EDA = Exploratory Data Analysis，探索式資料分析
 ---
 
+### [clean.py]架構
+
+# 🧹 Titanic `clean.py` 架構與資料流
+
+## 1. 函式架構圖
+
+clean.py
+├─ 常數
+│ └─ KEEP_COLS # 清理後要保留的欄位清單
+│
+├─ 基礎工具
+│ ├─ setup_logger() # 設定 logging 格式
+│ ├─ parse_args() # 讀取命令列參數 (--raw-dir, --out-dir)
+│ └─ ensure_dir() # 建立資料夾（若不存在）
+│
+├─ 輔助函式（純資料轉換，不做 I/O）
+│ ├─ _report_na() # 缺值統計，寫 log
+│ ├─ _family_size() # 建立 FamilySize 特徵
+│ ├─ _fill_age_with_median() # 用中位數補 Age
+│ ├─ _fill_embarked_with_mode()# 用眾數補 Embarked
+│ └─ _drop_columns() # 刪除指定欄位（存在才刪）
+│
+├─ clean_split() # 核心清理流程（不做 I/O，回傳 df, stats）
+│ ├─ 呼叫 _drop_columns()
+│ ├─ 呼叫 _family_size()
+│ ├─ 呼叫 _fill_age_with_median()
+│ ├─ 呼叫 _fill_embarked_with_mode()
+│ ├─ 填補 Fare
+│ └─ 篩選 KEEP_COLS
+│
+├─ run() # 封裝流程（含 I/O）
+│ ├─ ensure_dir()
+│ ├─ 讀 raw/train.csv, raw/test.csv
+│ ├─ _report_na()
+│ ├─ clean_split(train, is_train=True)
+│ ├─ clean_split(test , is_train=False, 使用 train 統計值)
+│ ├─ 輸出 train_clean.csv, test_clean.csv
+│ └─ return stats
+│
+└─ main() # CLI 入口
+├─ setup_logger()
+├─ parse_args()
+├─ run(raw_dir, out_dir)
+└─ log 完成訊息
+
+yaml
+複製程式碼
+
+---
+
+## 2. I/O 資料流圖
+
+命令列 / app.py
+│
+▼
+main()
+│
+▼
+run()
+│
+├─ ensure_dir()
+├─ 讀取 ● raw/train.csv
+├─ 讀取 ● raw/test.csv
+├─ _report_na(train/test)
+│
+├─ clean_split(train, is_train=True)
+│ → 輸出 train_clean_df
+│ → 產生 ◆ stats (age_median, embarked_mode, fare_median)
+│
+├─ clean_split(test, is_train=False, 使用 ◆ stats)
+│ → 輸出 test_clean_df
+│
+├─ 寫檔 ● processed/train_clean.csv
+├─ 寫檔 ● processed/test_clean.csv
+│
+└─ return ◆ stats → main() → (給 app.py 或 log 使用)
+
+yaml
+複製程式碼
+
+---
+
+## 3. 圖例說明
+
+- **●** = 檔案 (I/O)  
+- **◆** = 統計值（由 train 計算，給 test 使用）  
+- **clean_split()** = 純資料轉換，不直接做 I/O  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
