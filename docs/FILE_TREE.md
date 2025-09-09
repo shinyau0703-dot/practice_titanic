@@ -5,8 +5,9 @@
 ├─ .vscode/
 │
 ├─ data/
-│  ├─ raw/                                  # 原始 Kaggle Titanic 資料（train.csv, test.csv）
-│  └─ processed/                            # 清理後資料（可重生，Git 忽略）
+│  ├─ raw/                                  # 原始 Kaggle Titanic 資料（train, test, sub）
+│  ├─ processed/                            # 清理後資料（train, test）
+│  └─ clean.py                              # 資料清理(遺失值處理,刪掉不必要欄位,簡單衍生特徵)
 │
 ├─ docs/
 │  ├─ WEEK1_PLAN.md

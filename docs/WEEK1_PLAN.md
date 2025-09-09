@@ -25,13 +25,12 @@ Day 1 — 環境 + GitHub + 專案骨架
 
  [V] EDA(探索式資料分析)--jupyter notebook
 
- [ ] 缺值處理 clean.py
+ [V] 缺值處理 clean.py
 
- [ ] 類別轉數值（Sex, Embarked → OneHot）
+ [ ] 類別轉數值（OneHot）train.py
 
- [ ] 切分 train/valid (80/20)
+ [ ] 切分 train/valid (80/20)  train.py
 
- [ ] 存成 data/processed/ + preprocessor.joblib
 
 Day 3 — baseline 模型訓練
 
