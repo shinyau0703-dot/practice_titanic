@@ -1,30 +1,47 @@
 ﻿practice_w1/
-├─ .venv/               # Python 虛擬環境（本機用，Git 忽略）
-├─ .vscode/             # VSCode 專案設定（如 settings.json）
+├─ app.py                                  (X)  # 入口：clean/train/eval/predict 子命令總控
 │
-├─ data/                # 資料專區
-│  ├─ raw/              # 原始 Kaggle Titanic 資料（train.csv, test.csv）
-│  ├─ processed/        # 清理後資料（X_train, y_train...，可重生，Git 忽略）
+├─ .venv/
+├─ .vscode/
 │
-├─ docs/                # 文件(說明、規劃、紀錄) *通常是 Markdown(.md)檔，或文字檔
-│  ├─ WEEK1_PLAN.md     # Week1 計畫（todo list）
-│  └─ FILES_TREE.md    # 檔案清單快照
+├─ data/
+│  ├─ raw/                                  # 原始 Kaggle Titanic 資料（train.csv, test.csv）
+│  └─ processed/                            # 清理後資料（可重生，Git 忽略）
 │
-├─ experiments/         # 實驗結果
-│  └─ baseline_results.txt   # baseline 模型的報表
+├─ docs/
+│  ├─ WEEK1_PLAN.md
+│  └─ FILES_TREE.md
 │
-├─ models_store/        # 訓練好的模型檔（model.joblib, preprocessor.joblib）
+├─ experiments/
+│  └─ baseline_results.txt
 │
-├─ notebooks/           # Jupyter 筆記本
-│  └─ eda.ipynb         # EDA 探索式資料分析
+├─ models_store/                            # 存模型/前處理器（joblib / json 等）
 │
-├─ src/                 # 專案程式碼
-│  ├─ data/             # 資料處理
-│  │   └─ clean.py      # 資料清理 + 切分 train/valid
-│  ├─ models/           # 模型相關
-│  │   └─ train.py      # 訓練 baseline 模型
-│  └─ utils/            # 共用工具 (logger, config…)
+├─ notebooks/
+│  └─ eda.ipynb
 │
-├─ .gitignore           # 忽略清單（.venv/, __pycache__/, data/processed/…）
-├─ requirements.txt     # 套件清單（pip freeze 匯出）
-└─ README.md            # 專案簡介 + 使用說明 + 檔案樹
+├─ src/
+│  ├─ __init__.py                      (X)  # 讓 src 成為套件（方便 import）
+│  ├─ config.py                        (X)  # 集中管理路徑/常數/隨機種子
+│  │
+│  ├─ utils/
+│  │   ├─ __init__.py                 (X)
+│  │   └─ logging.py                  (X)  # 統一 logger（get_logger）
+│  │
+│  ├─ data/
+│  │   ├─ __init__.py                 (X)
+│  │   └─ clean.py                         # 你已有：資料清理 + 輸出 processed
+│  │
+│  ├─ features/
+│  │   ├─ __init__.py                 (X)
+│  │   └─ preprocess.py               (X)  # 建 ColumnTransformer/OneHot/Scaler
+│  │
+│  └─ models/
+│      ├─ __init__.py                 (X)
+│      ├─ train.py                         # 你已有：訓練 baseline（建議改成 run_train 介面）
+│      ├─ evaluate.py                 (X)  # 載入模型做評估、輸出指標
+│      └─ predict.py                  (X)  # 讀 test_clean 產生 submission.csv
+│
+├─ .gitignore
+├─ requirements.txt
+└─ README.md

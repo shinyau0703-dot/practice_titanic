@@ -2,6 +2,20 @@
 **EDA = Exploratory Data Analysis，探索式資料分析
 ---
 
+
+
+
+功能包含：補 Age（中位數）、補 Embarked（眾數）、刪除 Cabin、建立 FamilySize、保留常用欄位並輸出到 data/processed/。
+
+使用方式（在專案根目錄執行）
+# 1) 產出清理後資料：data/processed/train_clean.csv, test_clean.csv
+python src/data/clean.py
+
+# 2) 自訂輸入/輸出路徑（可選）
+python src/data/clean.py --raw-dir data/raw --out-dir data/processed
+
+
+
 ## 📦 前處理常用套件整理
 
 ### 🟦 資料操作 / 基礎工具
@@ -14,33 +28,14 @@
 
 ### 🟩 缺值處理 / 特徵工程
 - **scikit-learn (`sklearn`)**
-  - `sklearn.impute`  
-    - `SimpleImputer`：均值 / 中位數 / 眾數填補  
-    - `KNNImputer`：用鄰近樣本補值  
+  - `sklearn.impute` :：均值 / 中位數 / 眾數填補   
   - `sklearn.preprocessing`  
-    - `StandardScaler`：標準化 (平均=0, 方差=1)  
-    - `MinMaxScaler`：縮放到 [0,1]  
-    - `OneHotEncoder`：類別變數轉數值  
-    - `LabelEncoder`：將類別轉為整數編碼  
-    - `PolynomialFeatures`：生成多項式特徵  
-  - `sklearn.feature_selection`  
-    - `SelectKBest`、`RFE`：特徵選擇工具
 
 ### 🟨 資料視覺化
 - **matplotlib**  
   基礎繪圖：直方圖、散點圖、條狀圖  
-- **seaborn**  
-  統計視覺化：heatmap、boxplot、countplot、barplot  
 
-### 🟧 進階處理
-- **scipy**  
-  統計方法（t-test、卡方檢定、常態檢驗等）  
-- **category_encoders**  
-  進階編碼（Target Encoding、Ordinal Encoding 等）  
-- **imbalanced-learn (`imblearn`)**  
-  資料不平衡處理（SMOTE、RandomUnderSampler 等）
-
-### 🟥 實驗追蹤（可選）
+### 🟥 實驗追蹤（未用到）
 - **mlflow**  
   實驗管理，記錄參數、指標與模型  
 - **wandb (Weights & Biases)**  
@@ -56,11 +51,6 @@
 - 檔案路徑是否能正確找到 `train.csv`、`test.csv`
 
 ### Step 1 — 匯入與讀檔
-- 讀取 `train.csv`（訓練資料）  
-- 讀取 `test.csv`（測試資料）  
-- 讀取 `gender_submission.csv`（Kaggle 提交範例，可選）  
-- 確認資料大小與欄位名稱  
-
 ### Step 2 — 初步檢查
 - 查看資料列數與欄位數  
 - 使用 `head()` 檢視前幾筆資料  
@@ -92,3 +82,11 @@
 - 數值型可分箱或標準化：`Age`, `Fare`  
 
 ---
+
+
+
+
+
+
+
+
