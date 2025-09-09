@@ -20,21 +20,17 @@
  [V]撰寫 README/FILE_TREE/WEEK1_PLAN
 
 
-## Day 2 — 資料前處理(資料清理 + 分割)
+## Day 2 — 資料前處理(資料清理 + 分割) & baseline 模型訓練
 
- [V] EDA(探索式資料分析)--jupyter notebook
+[V] EDA(探索式資料分析)--jupyter notebook
 
- [V] 缺值處理 clean.py
+[V] 缺值處理 clean.py
 
- [V] 類別轉數值（OneHot）train.py
+[V] 類別轉數值（OneHot）train.py
 
- [V] 切分 train/valid (80/20)  train.py
+[V] 切分 train/valid (80/20)  train.py
      *output-1:models_store/model.joblib
      *output-2:experiments/baseline_results.txt
-
-## Day 3 — baseline 模型訓練
-
-目標：完成第一個可運行的模型
 
 [V] 使用 Logistic Regression 作 baseline  experiments/baseline_results.txt
 
@@ -44,17 +40,26 @@
 
 [V] 記錄結果於 experiments/baseline_results.txt
 
-## Day 4 — 重現性測試
+[ ]flowchart
+
+
+## Day 3 — 重現性測試
 
 目標：確認專案可從零跑起來
 
- 模擬新環境：刪掉 venv，重建並安裝 requirements.txt
+[ ] 模擬新環境：刪掉 venv，重建並安裝 requirements.txt
 
- 依 README 跑 clean.py → train.py
+[ ] 確保能產生相同結果
 
- 確保能產生相同結果
+[ ] 確保能產生相同結果
 
- 修正 README，補充完整流程
+
+
+
+
+## Day 4 — 重現性測試
+
+
 
 ## Day 5 — 專案驗收 & GitHub 更新
 
