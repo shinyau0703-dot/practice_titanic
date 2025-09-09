@@ -2,7 +2,7 @@
 **EDA = Exploratory Data Analysis，探索式資料分析
 ---
 
-### [clean.py]架構
+### [前處理- clean.py]架構
 
 # 🧹 Titanic `clean.py` 架構與資料流
 
@@ -47,8 +47,6 @@ clean.py
 ├─ run(raw_dir, out_dir)
 └─ log 完成訊息
 
-yaml
-複製程式碼
 
 ---
 
@@ -79,9 +77,6 @@ run()
 │
 └─ return ◆ stats → main() → (給 app.py 或 log 使用)
 
-yaml
-複製程式碼
-
 ---
 
 ## 3. 圖例說明
@@ -90,46 +85,9 @@ yaml
 - **◆** = 統計值（由 train 計算，給 test 使用）  
 - **clean_split()** = 純資料轉換，不直接做 I/O  
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-功能包含：補 Age（中位數）、補 Embarked（眾數）、刪除 Cabin、建立 FamilySize、保留常用欄位並輸出到 data/processed/。
-
-使用方式（在專案根目錄執行）
-# 1) 產出清理後資料：data/processed/train_clean.csv, test_clean.csv
-python src/data/clean.py
-
-# 2) 自訂輸入/輸出路徑（可選）
-python src/data/clean.py --raw-dir data/raw --out-dir data/processed
-
-
-
-## 📦 前處理常用套件整理
+## 4. 📦 前處理常用套件整理
 
 ### 🟦 資料操作 / 基礎工具
 - **pandas**  
@@ -154,9 +112,17 @@ python src/data/clean.py --raw-dir data/raw --out-dir data/processed
 - **wandb (Weights & Biases)**  
   雲端實驗追蹤，適合團隊合作  
 
+
+---
+---
 ---
 
-## 📊 Titanic EDA 流程
+
+
+
+### [EDA- eda_titanic.ipynb]架構
+
+## 📊 Titanic  流程
 
 ### Step 0 — 基本設定
 - 確認工作目錄 (CWD) 是否正確  
