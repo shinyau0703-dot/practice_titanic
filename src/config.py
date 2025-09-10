@@ -42,12 +42,11 @@ RANDOM_SEED = 42
 TEST_SIZE = 0.2
 CV_FOLDS = 5
 
-# 模型選擇
-DEFAULT_MODEL = "RandomForest"  # 可選: LogisticRegression, RandomForest, XGBoost
+# 模型選擇(LogisticRegression, RandomForest, XGBoost)
+DEFAULT_MODEL = "RandomForest" 
 
 # 確保必要資料夾存在
 def ensure_directories():
-    """確保所有必要的資料夾都存在"""
     directories = [
         DATA_ROOT,
         RAW_DATA_PATH,
@@ -63,14 +62,12 @@ def ensure_directories():
     print("✅ 所有必要資料夾已建立")
 
 
+# 測試設定
 if __name__ == "__main__":
-    # 測試設定
     print("專案設定:")
     print(f"專案根目錄: {PROJECT_ROOT}")
     print(f"訓練資料: {TRAIN_RAW_PATH}")
     print(f"測試資料: {TEST_RAW_PATH}")
     print(f"模型路徑: {MODEL_PATH}")
     print(f"隨機種子: {RANDOM_SEED}")
-    
-    # 建立資料夾
     ensure_directories()

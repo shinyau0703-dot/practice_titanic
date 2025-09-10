@@ -40,10 +40,31 @@
 
 [V] 記錄結果於 experiments/baseline_results.txt
 
-[V]flowchart
+
+## Day 3 — 重現性
+[V] 1環境重現（requirements.txt）
+[V] 2資料重現（data/processed 保存清理結果）
+[V] 3參數重現（configs.py）
+[V] 4隨機性/決定性（random_state）
+[ ] 5流程重現
 
 
-## Day 3 — 重現性測試
+
+
+
+
+[ ] flowchart
+*架構為甚麼這樣做(優點?進步?)
+
+目標：給我幾個Git有可能會碰到的問題(練習)
+*自動化CI/CD：push 後自動測試程式、訓練模型
+*可監控:MLOps pipeline 裡有監控/回訓
+
+[V] Git 切換分支
+
+[V]虛擬環境(.venv)/系統環境(主機)
+*下周目標:下載別人的git 重建虛擬環境 跑他的程式
+*下周目標:def 不要寫死
 
 目標：確認專案可從零跑起來
 
@@ -51,15 +72,11 @@
 
 [ ] 確保能產生相同結果
 
-[ ] 確保能產生相同結果
 
 
+## Day 4 — 
 
-
-
-## Day 4 — 重現性測試
-
-
+[ ] 開發流程
 
 ## Day 5 — 專案驗收 & GitHub 更新
 
