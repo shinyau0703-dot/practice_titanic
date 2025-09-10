@@ -71,26 +71,12 @@ import json, joblib
 joblib.dump(pipeline, "models/model.joblib")
 json.dump({"acc": acc, "f1": f1}, open("experiments/2025-09-10_001/metrics.json","w"))
 
-7) 實驗追蹤（Experiment Tracking）
+7) 實驗追蹤（MLflow）
 
 做什麼：每次實驗都產生「誰/何時/用哪個 config/資料版本/commit SHA/結果」的紀錄。
 
 為什麼：比較與回溯。
 
-做法/工具
-
-MLflow（本地好上手）或 Weights & Biases（團隊協作佳）
-
-最小示例（MLflow）
-
-pip install mlflow
-mlflow ui  # 打開本地介面
-
-import mlflow
-with mlflow.start_run():
-    mlflow.log_params(cfg["model"])
-    mlflow.log_metric("acc", acc)
-    mlflow.log_artifact("models/model.joblib")
 
 8) 自動化與守門（CI/CD & Tests）
 
