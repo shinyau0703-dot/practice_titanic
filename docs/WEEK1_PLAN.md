@@ -40,7 +40,7 @@
 
 [V] 記錄結果於 experiments/baseline_results.txt
 
-[ ]flowchart
+[V]flowchart
 
 
 ## Day 3 — 重現性測試

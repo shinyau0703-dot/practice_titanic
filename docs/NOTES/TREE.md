@@ -1,4 +1,5 @@
 # Titanic 專案流程圖
+*ctrl + shift + V
 
 ```mermaid
 flowchart TD
