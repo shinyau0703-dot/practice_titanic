@@ -1,0 +1,18 @@
+2025-09-11 10:05:24,784 [INFO] Start k-fold training | data=D:\practive_w1\data\processed\train_clean.csv | target=Survived | folds=5 | seed=42
+2025-09-11 10:05:24,784 [INFO] Columns: num=['Pclass', 'Age', 'SibSp', 'Parch', 'Fare'] | cat=['Sex', 'Embarked']
+2025-09-11 10:05:25,561 [INFO] [Fold 0] n_train=712 n_valid=179
+2025-09-11 10:05:26,654 [INFO] [Fold 0] fitted; evaluating…
+2025-09-11 10:05:26,669 [INFO] [Fold 0] acc=0.7709 f1=0.7050
+2025-09-11 10:05:26,708 [INFO] [Fold 1] n_train=713 n_valid=178
+2025-09-11 10:05:27,303 [INFO] [Fold 1] fitted; evaluating…
+2025-09-11 10:05:27,319 [INFO] [Fold 1] acc=0.8034 f1=0.7287
+2025-09-11 10:05:27,358 [INFO] [Fold 2] n_train=713 n_valid=178
+2025-09-11 10:05:27,963 [INFO] [Fold 2] fitted; evaluating…
+2025-09-11 10:05:27,980 [INFO] [Fold 2] acc=0.7921 f1=0.7040
+2025-09-11 10:05:28,023 [INFO] [Fold 3] n_train=713 n_valid=178
+2025-09-11 10:05:28,625 [INFO] [Fold 3] fitted; evaluating…
+2025-09-11 10:05:28,641 [INFO] [Fold 3] acc=0.7809 f1=0.7153
+2025-09-11 10:05:28,681 [INFO] [Fold 4] n_train=713 n_valid=178
+2025-09-11 10:05:29,280 [INFO] [Fold 4] fitted; evaluating…
+2025-09-11 10:05:29,293 [INFO] [Fold 4] acc=0.8202 f1=0.7681
+2025-09-11 10:05:29,332 [INFO] [AVG] acc=0.7935 f1=0.7242

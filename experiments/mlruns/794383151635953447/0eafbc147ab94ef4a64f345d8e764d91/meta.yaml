@@ -1,0 +1,15 @@
+artifact_uri: file:D:\practive_w1\experiments\mlruns/794383151635953447/0eafbc147ab94ef4a64f345d8e764d91/artifacts
+end_time: 1757552742244
+entry_point_name: ''
+experiment_id: '794383151635953447'
+lifecycle_stage: active
+run_id: 0eafbc147ab94ef4a64f345d8e764d91
+run_name: kfold_seed42_f5
+run_uuid: 0eafbc147ab94ef4a64f345d8e764d91
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757552732714
+status: 3
+tags: []
+user_id: Sandy

@@ -1,0 +1,15 @@
+artifact_uri: file:D:\practive_w1\experiments\mlruns/794383151635953447/2b5b9adb6ef24b2fa9a0eb6d1568f022/artifacts
+end_time: 1757551725478
+entry_point_name: ''
+experiment_id: '794383151635953447'
+lifecycle_stage: active
+run_id: 2b5b9adb6ef24b2fa9a0eb6d1568f022
+run_name: fold_2
+run_uuid: 2b5b9adb6ef24b2fa9a0eb6d1568f022
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757551725423
+status: 3
+tags: []
+user_id: Sandy
