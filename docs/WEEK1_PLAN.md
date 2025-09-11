@@ -44,6 +44,7 @@
 ## Day 3 — 重現性
 
 目標：確認專案可從零跑起來&產生相同結果
+
  [重現性 List](docs/NOTES/4_Reproducibility.md)
 
 [V] 1環境重現（requirements.txt）
@@ -72,13 +73,15 @@
 *架構為甚麼這樣做(優點?進步?)
 
 [V] 目標：給我幾個Git有可能會碰到的問題(練習)
-[Problem List](docs/NOTES/5_Problems.md)
 *自動化CI/CD：push 後自動測試程式、訓練模型
 *可監控:MLOps pipeline 裡有監控/回訓
+
+[Problem List](docs/NOTES/5_Problems.md)
 
 ## Day 5 — 專案驗收
 
 [V] CheckList
+
 [查看 CheckList](docs/NOTES/6_CheckList.md)
 
 
