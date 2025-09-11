@@ -1,0 +1,227 @@
+{
+  "timestamp": "2025-09-11T09:05:42.192788+08:00",
+  "git_commit": "2b9677d",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "packages": {
+    "numpy": "2.3.2",
+    "pandas": "2.3.2",
+    "scikit_learn": "1.7.1",
+    "joblib": "1.5.2"
+  },
+  "data": {
+    "path": "data\\processed\\train_clean.csv",
+    "sha256": "c3293a67a50b0a90bb803214e9edd8d052146d8d68bc1fa3048aa0ac454e9352",
+    "rows": 891,
+    "cols": 10,
+    "target": "Survived"
+  },
+  "cv": {
+    "folds": 5,
+    "shuffle": true,
+    "seed": 42,
+    "type": "StratifiedKFold"
+  },
+  "model_family": "logreg",
+  "folds": [
+    {
+      "fold": 0,
+      "metrics": {
+        "acc": 0.770949720670391,
+        "f1": 0.7050359712230215
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 1000,
+        "multi_class": "deprecated",
+        "n_jobs": 1,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "n_train": 712,
+      "n_valid": 179,
+      "num_cols": [
+        "Pclass",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "FamilySize",
+        "PassengerId"
+      ],
+      "cat_cols": [
+        "Sex",
+        "Embarked"
+      ]
+    },
+    {
+      "fold": 1,
+      "metrics": {
+        "acc": 0.8033707865168539,
+        "f1": 0.7286821705426356
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 1000,
+        "multi_class": "deprecated",
+        "n_jobs": 1,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "n_train": 713,
+      "n_valid": 178,
+      "num_cols": [
+        "Pclass",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "FamilySize",
+        "PassengerId"
+      ],
+      "cat_cols": [
+        "Sex",
+        "Embarked"
+      ]
+    },
+    {
+      "fold": 2,
+      "metrics": {
+        "acc": 0.7865168539325843,
+        "f1": 0.6984126984126984
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 1000,
+        "multi_class": "deprecated",
+        "n_jobs": 1,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "n_train": 713,
+      "n_valid": 178,
+      "num_cols": [
+        "Pclass",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "FamilySize",
+        "PassengerId"
+      ],
+      "cat_cols": [
+        "Sex",
+        "Embarked"
+      ]
+    },
+    {
+      "fold": 3,
+      "metrics": {
+        "acc": 0.7808988764044944,
+        "f1": 0.7153284671532847
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 1000,
+        "multi_class": "deprecated",
+        "n_jobs": 1,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "n_train": 713,
+      "n_valid": 178,
+      "num_cols": [
+        "Pclass",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "FamilySize",
+        "PassengerId"
+      ],
+      "cat_cols": [
+        "Sex",
+        "Embarked"
+      ]
+    },
+    {
+      "fold": 4,
+      "metrics": {
+        "acc": 0.8258426966292135,
+        "f1": 0.7703703703703704
+      },
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 1000,
+        "multi_class": "deprecated",
+        "n_jobs": 1,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "n_train": 713,
+      "n_valid": 178,
+      "num_cols": [
+        "Pclass",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "FamilySize",
+        "PassengerId"
+      ],
+      "cat_cols": [
+        "Sex",
+        "Embarked"
+      ]
+    }
+  ],
+  "metrics_avg": {
+    "acc": 0.7935157868307074,
+    "f1": 0.723565935540402
+  }
+}

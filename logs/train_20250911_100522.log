@@ -1,0 +1,3 @@
+2025-09-11 10:05:22,491 [INFO] 開始執行模型訓練 (5-fold)...
+2025-09-11 10:05:22,491 [INFO] 執行：D:\practive_w1\.venv\Scripts\python.exe -m src.models.train_kfold --data D:\practive_w1\data\processed\train_clean.csv --target Survived --folds 5 --seed 42
+2025-09-11 10:05:29,985 [INFO] ✅ 模型訓練完成（模型與實驗已輸出到 models/ 與 experiments/）

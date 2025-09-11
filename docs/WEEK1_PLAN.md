@@ -44,20 +44,36 @@
 ## Day 3 — 重現性
 
 目標：確認專案可從零跑起來&產生相同結果
+ 
+[V] 1環境重現（requirements.txt）
+
+[V] 2資料重現（data/processed 保存清理結果）
+
+[V] 3參數重現（configs.py）
+
+[V] 4隨機性/決定性（random_state）
+
+[V] 5流程重現（python app.py pipeline）
+
+[V] 6模型重現（config）
+
+[V] 7實驗追蹤（kfold,logs紀錄）
+
+[ ] 8自動化與守門（CI/CD & Tests）
+
+
+## Day 4 — 優化
 
 [ ] 模擬新環境：刪掉 venv，重建並安裝 requirements.txt
-
-
-## Day 4 — 
 
 [ ] 開發流程 flowchart
 *架構為甚麼這樣做(優點?進步?)
 
 [V] Git 切換分支
 
-[V]虛擬環境(.venv)/系統環境(主機)
 *下周目標:下載別人的git 重建虛擬環境 跑他的程式
-*下周目標:def 不要寫死
+
+[ ] 下周目標:def 不要寫死
 
 
 目標：給我幾個Git有可能會碰到的問題(練習)
