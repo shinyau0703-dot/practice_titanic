@@ -28,3 +28,7 @@ Repro Playbook（八大面向）
 做什麼：每次實驗都產生「誰/何時/用哪個 config/資料版本/commit SHA/結果」的紀錄。
 為什麼：比較與回溯。
 
+
+模擬新環境：刪掉 venv，重建並安裝 requirements.txt
+刪掉 venv 後再照這套「建立 → 啟用 → 安裝 → 驗證」
+

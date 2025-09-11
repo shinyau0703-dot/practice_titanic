@@ -1,4 +1,7 @@
 # src/models/train_kfold.py
+
+MLFLOW_OK = False
+
 import argparse, json, os, hashlib, platform, subprocess, sys
 from datetime import datetime
 from pathlib import Path
