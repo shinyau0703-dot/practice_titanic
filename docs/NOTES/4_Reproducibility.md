@@ -28,6 +28,7 @@ Repro Playbook（八大面向）
 為什麼：隨機抽樣/初始化會影響結果。
 
 
+<<<<<<< HEAD
 5) 流程重現（Pipelines & Orchestration）
 
 做什麼：把「clean → features → train → eval → predict」做成可一鍵跑的工作流。
@@ -153,3 +154,5 @@ python app.py predict --config configs/baseline.yaml
 你現在的目錄結構已經打好地基；照上面 Playbook 逐步加上 Config 化、Seed 固定、Artifacts 與 Run 記錄、Makefile、（可選）MLflow/DVC，你的專案就具備工程級可重現的能力。
 
 如果你願意，我可以直接幫你把 configs/、Makefile、RUN_INFO 紀錄程式碼 做成 PR 級別的檔案片段，貼進你的 repo 就能用。
+=======
+>>>>>>> 4e37e08 (main)

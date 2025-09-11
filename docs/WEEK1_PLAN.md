@@ -44,6 +44,26 @@
 ## Day 3 — 重現性
 
 目標：確認專案可從零跑起來&產生相同結果
+<<<<<<< HEAD
+=======
+ 
+[V] 1環境重現（requirements.txt）
+
+[V] 2資料重現（data/processed 保存清理結果）
+
+[V] 3參數重現（configs.py）
+
+[V] 4隨機性/決定性（random_state）
+
+[V] 5流程重現（python app.py pipeline）
+
+[V] 6模型重現（config）
+
+[V] 7實驗追蹤（kfold,logs紀錄）
+
+
+## Day 4 — 優化
+>>>>>>> 4e37e08 (main)
 
 [ ] 模擬新環境：刪掉 venv，重建並安裝 requirements.txt
 
