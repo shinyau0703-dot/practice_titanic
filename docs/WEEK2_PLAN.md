@@ -42,6 +42,8 @@
 - [ ] 嘗試建立一個「失敗 run」：故意插入錯誤資料，觀察 rollback 行為
 - [ ] （選擇性）在 logs/ 中輸出 db.log，記錄寫入狀態
 
+- [ ] 整理成pdf
+
 ## Bonus（可選挑戰）
 - [ ] 使用 pgAdmin/DBeaver GUI 觀察資料表結構
 - [ ] 練習備份/還原（pg_dump / pg_restore）

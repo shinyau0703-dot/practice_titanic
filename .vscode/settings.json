@@ -1,4 +1,12 @@
-﻿{
-  "python.defaultInterpreterPath": "D:\\practive_w1\\.venv\\Scripts\\python.exe",
-  "python.terminal.activateEnvironment": true
+{
+  "python.defaultInterpreterPath": "D:\\practice_titanic\\.venv\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
+  "sqltools.connections": [
+    {
+      "name": "titanic",
+      "driver": "PostgreSQL",
+      "connectionUrl": "postgres://practice_titanic:titanic@127.0.0.1:5432/titanic?sslmode=disable",
+      "previewLimit": 100
+    }
+  ]
 }
