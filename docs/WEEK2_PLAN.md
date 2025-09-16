@@ -5,19 +5,12 @@
 - [V] 成功透過 SQLTools 連上 PostgreSQL
 - [V] 建立了專案資料庫 titanic
 - [V] 建立專用使用者 app 並設定密碼
-- [ ] 設定 app 僅能操作 titanic 資料庫的權限
-- [ ] 建立了最小化的成果表 runs
-- [ ] 插入了一筆測試資料到 runs
-- [ ] 驗證能正常查詢資料
-- [ ] 使用 app 帳號重新連線並確認可讀可寫
+- [V] 建立了最小化的成果表 runs
+- [V] 驗證能正常查詢資料
 
 ## Day 2：匯入與 CRUD
-- [ ] 匯入 train_clean.csv 到 PG（COPY 或 Python pandas → to_sql）
-- [ ] 練習 CRUD：
-  - [ ] C：新增一筆 run（例如 logistic regression，acc=0.78, f1=0.72）
-  - [ ] R：查詢最佳 f1 的 run
-  - [ ] U：更新一筆 run 的 model_family（測試 update 語法）
-  - [ ] D：刪掉一筆 run（熟悉 DELETE 語法）
+- [V] 匯入 train_clean.csv 到 PG
+- [V] 練習 CRUD(新增/查詢/更新/刪掉)
 - [ ] 新增第二張表 fold_results：id, run_id, fold, acc, f1
 - [ ] 插入一筆 run_id=1 的 5 筆 fold 資料，並查詢出平均
 
@@ -45,8 +38,14 @@
 
 - [ ] 整理成pdf
 
-## Bonus（可選挑戰）
-- [ ] 使用 pgAdmin/DBeaver GUI 觀察資料表結構
-- [ ] 練習備份/還原（pg_dump / pg_restore）
-- [ ] 嘗試 JSON 欄位（在 runs 加 feature_flags JSONB，手動插入 {"FamilySize": true}）
-- [ ] 嘗試用 Docker 建立第二個 PG container 當「測試環境」
+
+
+
+
+
+
+
+
+
+
+
