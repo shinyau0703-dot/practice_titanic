@@ -1,14 +1,15 @@
 # Week 2 DB Plan（PostgreSQL）
 *「安裝 → 建表 → CRUD → 查詢 → 基本索引 → 串 pipeline」
 
-## Day 1：安裝與連線
-- [ ] 安裝 PostgreSQL（Docker）
-*ctrl + D 跳出  (回到PS D:\practive_w1>)
-- [ ] 建立資料庫 titanic
-- [ ] 建立使用者 app，設定密碼（只給 titanic 權限）
-- [ ] 測試連線：用 psql 或 DBeaver/pgAdmin 連進去，跑 SELECT version();
-- [ ] 建立最小 runs 表：id (SERIAL PK), timestamp, model_family, avg_acc, avg_f1
-- [ ] 手動插入一筆假 run，確認能查詢出來
+## Day 1：資料庫作業完成清單 ✅
+- [V] 成功透過 SQLTools 連上 PostgreSQL
+- [V] 建立了專案資料庫 titanic
+- [V] 建立專用使用者 app 並設定密碼
+- [ ] 設定 app 僅能操作 titanic 資料庫的權限
+- [ ] 建立了最小化的成果表 runs
+- [ ] 插入了一筆測試資料到 runs
+- [ ] 驗證能正常查詢資料
+- [ ] 使用 app 帳號重新連線並確認可讀可寫
 
 ## Day 2：匯入與 CRUD
 - [ ] 匯入 train_clean.csv 到 PG（COPY 或 Python pandas → to_sql）
