@@ -3,7 +3,7 @@
   "python.terminal.activateEnvironment": true,
   "sqltools.connections": [
     {
-      "name": "titanic",
+      "name": "",
       "driver": "PostgreSQL",
       "connectionUrl": "postgres://practice_titanic:titanic@127.0.0.1:5432/titanic?sslmode=disable",
       "previewLimit": 100
