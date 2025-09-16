@@ -1,8 +1,9 @@
-# Week 2 DB Plan（PostgreSQL 專版，新手友善＋進階練習）
+# Week 2 DB Plan（PostgreSQL）
 *「安裝 → 建表 → CRUD → 查詢 → 基本索引 → 串 pipeline」
 
 ## Day 1：安裝與連線
-- [ ] 安裝 PostgreSQL（本機 or Docker，版本 16+）
+- [ ] 安裝 PostgreSQL（Docker）
+*ctrl + D 跳出  (回到PS D:\practive_w1>)
 - [ ] 建立資料庫 titanic
 - [ ] 建立使用者 app，設定密碼（只給 titanic 權限）
 - [ ] 測試連線：用 psql 或 DBeaver/pgAdmin 連進去，跑 SELECT version();
