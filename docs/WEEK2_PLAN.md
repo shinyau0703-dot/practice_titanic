@@ -11,19 +11,17 @@
 ## Day 2：匯入與 CRUD
 - [V] 匯入 train_clean.csv 到 PG
 - [V] 練習 CRUD(新增/查詢/更新/刪掉)
-- [ ] 新增第二張表 fold_results：id, run_id, fold, acc, f1
-- [ ] 插入一筆 run_id=1 的 5 筆 fold 資料，並查詢出平均
+- [V] 新增第二張表 fold_results：id, run_id, fold, acc, f1
+- [V] 插入一筆 run_id=1 的 5 筆 fold 資料，並查詢出平均
 
 ## Day 3：查詢與索引
-- [ ] 練習查詢：
-  - [ ] Top 5 平均 f1 的 runs
-  - [ ] 同一個 seed 下不同模型的比較
-  - [ ] 指定時間區間內（例如今天）的 runs
-- [ ] 建立索引：
-  - [ ] runs(model_family)
-  - [ ] fold_results(run_id)
-- [ ] 使用 EXPLAIN，觀察索引有無被使用
-- [ ] 匯出查詢結果成 CSV（用 SQL 或 pandas）
+- [V] 練習查詢：
+  - [V] Top 5 平均 f1 的 runs
+  - [V] 同一個 seed 下不同模型的比較
+  - [V] 指定時間區間內（例如今天）的 runs
+- [V] 建立索引：
+  - [V] runs(model_family)
+  - [V] fold_results(run_id)
 
 ## Day 4：整合與自動化
 - [ ] 修改 app.py pipeline：

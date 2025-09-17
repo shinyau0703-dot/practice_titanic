@@ -2,3 +2,39 @@
 2025-09-09 14:34:09 - test - ERROR - 這是錯誤訊息
 2025-09-09 14:37:00 - test - WARNING - 這是警告訊息
 2025-09-09 14:37:00 - test - ERROR - 這是錯誤訊息
+2025-09-17 11:09:17 - train - WARNING - ⚠️ 找不到或無法使用 src.models.train.train_and_eval()，改用示範假資料
+2025-09-17 11:09:17 - train - ERROR - ❌ 模型訓練失敗: 'NoneType' object is not subscriptable
+2025-09-17 11:09:17 - train - ERROR - Traceback (most recent call last):
+  File "D:\practice_titanic\app.py", line 147, in train_model
+    model_family = result["model_family"]
+                   ~~~~~~^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+2025-09-17 11:09:17 - pipeline - ERROR - ❌ 流程在 '模型訓練' 步驟失敗
+2025-09-17 11:09:17 - app - ERROR - ❌ 命令 'pipeline' 執行失敗
+2025-09-17 11:17:36 - train - WARNING - ⚠️ 找不到或無法使用 src.models.train.train_and_eval()，改用示範假資料
+2025-09-17 11:17:36 - train - ERROR - ❌ 模型訓練失敗: permission denied for sequence fold_results_id_seq
+2025-09-17 11:17:36 - train - ERROR - Traceback (most recent call last):
+  File "D:\practice_titanic\app.py", line 163, in train_model
+    run_id = log_run_and_folds(
+        model_family=model_family,
+    ...<3 lines>...
+        folds=folds,
+    )
+  File "D:\practice_titanic\app.py", line 72, in log_run_and_folds
+    cur.executemany(
+    ~~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<6 lines>...
+        [(run_id, int(x["fold"]), float(x["acc"]), float(x["f1"])) for x in folds],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\practice_titanic\.venv\Lib\site-packages\psycopg\cursor.py", line 128, in executemany
+    raise ex.with_traceback(None)
+psycopg.errors.InsufficientPrivilege: permission denied for sequence fold_results_id_seq
+
+2025-09-17 11:17:36 - pipeline - ERROR - ❌ 流程在 '模型訓練' 步驟失敗
+2025-09-17 11:17:36 - app - ERROR - ❌ 命令 'pipeline' 執行失敗
+2025-09-17 11:23:16 - train - WARNING - ⚠️ 找不到或無法使用 src.models.train.train_and_eval()，改用示範假資料
