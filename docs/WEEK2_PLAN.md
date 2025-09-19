@@ -24,15 +24,10 @@
   - [V] fold_results(run_id)
 
 ## Day 4：整合與自動化
-- [ ] 修改 app.py pipeline：
-  - [ ] pipeline 執行結束 → 自動寫入 runs 表（avg_acc/f1、seed、model_family）
-  - [ ] 每折 fold 的結果 → 寫入 fold_results 表
-- [ ] 查詢驗證：pipeline 完成後，能在 PG 裡找到這次 run 的資料
-- [ ] 新增小報表腳本（Python）：
-  - [ ] 查詢所有 runs → 輸出 all_runs.csv
-  - [ ] 查詢歷史最佳 run → 印在 console
-- [ ] 嘗試建立一個「失敗 run」：故意插入錯誤資料，觀察 rollback 行為
-- [ ] （選擇性）在 logs/ 中輸出 db.log，記錄寫入狀態
+- [V] 修改 app.py pipeline：
+  - [V] pipeline 執行結束 → 自動寫入 runs 表（avg_acc/f1、seed、model_family）
+  - [V] 每折 fold 的結果 → 寫入 fold_results 表
+- [V] 查詢驗證：pipeline 完成後，能在 PG 裡找到這次 run 的資料
 
 - [ ] 整理成pdf
 
