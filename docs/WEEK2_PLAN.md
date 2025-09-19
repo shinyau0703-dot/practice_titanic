@@ -29,7 +29,6 @@
   - [V] 每折 fold 的結果 → 寫入 fold_results 表
 - [V] 查詢驗證：pipeline 完成後，能在 PG 裡找到這次 run 的資料
 
-- [ ] 整理成pdf
 
 
 
